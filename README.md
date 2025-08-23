@@ -1,7 +1,7 @@
 # Unifi
 Share my script for Ubiquiti Unifi
 
-How 
+✅ How 
 
 ### 1 - connect via SSH to your Unifi gateway
 ssh ip_gateway -l root
