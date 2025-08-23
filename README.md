@@ -3,7 +3,7 @@ Share my script for Ubiquiti Unifi
 
 How 
 
-1 - connect via SSH to your Unifi gateway
+### 1 - connect via SSH to your Unifi gateway
 ssh ip_gateway -l root
 
 2 - go to a persistant folder /mnt/data and create a log folder
