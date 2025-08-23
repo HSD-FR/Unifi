@@ -57,6 +57,13 @@ update_record() {
         -H "Authorization: Bearer $API_TOKEN" \
         -H "Content-Type: application/json")
 
+	SUCCESS=$(echo "$RECORD" | jq -r '.success')
+
+	if [ "$SUCCESS" != "true" ]; then
+    	ERRORS=$(echo "$RECORD" | jq -r '.errors[]?.message')
+    	echo "$(date '+%Y-%m-%d %H:%M:%S') [ERROR] Cloudflare API request failed: $ERRORS" >> "$LOG_FILE"
+    	exit 1
+	fi
     # ID record (get 1st if more than 1)
 	RECORD_ID=$(echo "$RECORD" | jq -r '.result[0].id // empty')
 	RECORD_IP=$(echo "$RECORD" | jq -r '.result[0].content // empty')
