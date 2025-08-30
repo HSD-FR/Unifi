@@ -25,9 +25,9 @@ vi log_rotate.sh
 i  
 paste the code  
 
-### 6 - Change crontab. In this example, every 5 minutes for DDNS_CloudFlare.sh and each 1 day of the month at 00:00 for log_rotate.sh.
+### 6 - Change crontab. In this example, every 5 minutes for 0crontab.sh and each 1 day of the month at 00:00 for log_rotate.sh.
 crontab -e  
 i  
 #at the end of the file paste this:  
-*/5 * * * * /mnt/data/DDNS_CloudFlare.sh 2>&1  
+*/5 * * * * /mnt/data/0crontab.sh 2>&1  
 0 0 1 * * /mnt/data/log_rotate.sh 2>&1  
