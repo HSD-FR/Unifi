@@ -32,7 +32,7 @@ fi
 
 JSON=$(curl -k   -H "X-API-KEY: $TOKEN" \
 		-H "Accept: application/json" \
-		"https://192.168.1.1/proxy/network/api/s/default/stat/health")
+		"https://127.0.0.1/proxy/network/api/s/default/stat/health")
 
 # -------- EXTRACTION UNIQUE --------
 eval $(echo "$JSON" | jq -r '
