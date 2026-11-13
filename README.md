@@ -29,5 +29,5 @@ paste the code
 crontab -e  
 i  
 #at the end of the file paste this:  
-*/5 * * * * /mnt/data/0crontab.sh 2>&1  
+*/1 * * * * /mnt/data/0crontab.sh 2>&1  
 0 0 1 * * /mnt/data/log_rotate.sh 2>&1  
